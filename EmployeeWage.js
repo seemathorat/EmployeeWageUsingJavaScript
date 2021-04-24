@@ -51,3 +51,14 @@ let empCheck = Math.floor(Math.random() * 10) %3;
 let empHrs = getWorkingHours(empCheck);
 let empWage = empHrs * WAGE_PER_HOUR;
 console.log("Hour: " +empHrs +  "Emp wage" + empWage);
+{
+    const NUM_OF_WORKING_DAYS = 20;
+    let totalEmpHrs = 0;
+    for(let day = 0; day < NUM_OF_WORKING_DAYS; day++)
+    {
+        let empCheck = Math.floor(Math.random() * 10) %3;
+        totalEmpHrs += getWorkingHours(empCheck);
+    }
+    let empWage = totalEmpHrs * WAGE_PER_HOUR;
+    console.log("UC-4 Total Hes: " +totalEmpHrs+ "Emp Wage: " + empWage);
+}
